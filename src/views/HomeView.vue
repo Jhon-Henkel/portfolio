@@ -6,8 +6,6 @@
             return {
                 age: this.calculateDifferenceOfNowToDate(new Date(1995, 10, 12)),
                 experienceTime: this.calculateDifferenceOfNowToDate(new Date(2022, 3, 21)),
-                linkedinLink: 'https://www.linkedin.com/in/jhonatan-henkel-b55950211/',
-                githubLink: 'https://github.com/jhon-Henkel'
             }
         },
         methods: {
@@ -39,11 +37,14 @@
                 <span>WEB</span>
             </div>
             <div class="icons col-7">
-                <a href="{{ linkedinLink }}" target="_blank" class="a-default me-3">
+                <a href="https://www.linkedin.com/in/jhonatan-henkel-b55950211/" target="_blank" class="a-default me-3">
                     <i class="fa-brands fa-linkedin"/>
                 </a>
-                <a href="{{ githubLink }}" target="_blank" class="a-default me-3">
+                <a href="https://github.com/jhon-Henkel" target="_blank" class="a-default me-3">
                     <i class="fa-brands fa-github"/>
+                </a>
+                <a href="https://medium.com/@jhowrf" target="_blank" class="a-default me-3">
+                    <i class="fa-brands fa-medium"/>
                 </a>
             </div>
         </div>
