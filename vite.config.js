@@ -8,6 +8,7 @@ export default defineConfig({
             host: 'localhost'
         }
     },
+    base: "/dist/",
     plugins: [
         vue({
             template: {
@@ -18,7 +19,4 @@ export default defineConfig({
             }
         }),
     ],
-    build: {
-        outDir: 'public',
-    }
 })
