@@ -25,3 +25,13 @@ body {
     background-size: cover;
     background-position: center;
 }
+
+@media (max-width: 1000px) {
+    body {
+        font-size: 14px;
+    }
+
+    .center-items {
+        margin: 60% auto;
+    }
+}

@@ -102,4 +102,23 @@
     .a-default:hover {
         color: rgb(5, 100, 107);
     }
+
+    @media (max-width: 1000px) {
+        .big-text {
+            font-size: 3rem;
+        }
+        .bottom-text {
+            font-size: 0.4rem;
+        }
+        .bottom-text-line-one {
+            margin-right: 2rem;
+        }
+        .bottom-text-line-two {
+            margin-right: 5rem;
+        }
+        .icons {
+            margin-top: 0;
+            font-size: 2rem;
+        }
+    }
 </style>
