@@ -5,5 +5,4 @@ os projetos que já fiz.
 
 # Como rodar o projeto
 - Montar o container
-- Rodar o comando ***npm install && npm run dev***
-- Acessar o endereço ***http://localhost:5173/dist*** para visualizar o projeto
+- Acessar o endereço ***http://localhost*** para visualizar o projeto
