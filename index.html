@@ -1,26 +1,198 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
     <head>
         <meta charset="UTF-8">
         <link rel="icon" href="./src/assets/favicon.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfólio Jhon</title>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
               rel="stylesheet"
               integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
               crossorigin="anonymous">
+        <link rel="stylesheet" href="./src/assets/main.css">
     </head>
     <body>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZF0NLX1C5"></script>
-        <script>
+        <script type="text/javascript">
             window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
+            function gtag() {
+                dataLayer.push(arguments);
+            }
             gtag('js', new Date());
             gtag('config', 'G-KZF0NLX1C5');
+
+            window.onload = function(){
+                const today = new Date()
+                const experienceStart = new Date(2022, 3, 21)
+                const experienceTime = today.getFullYear() - experienceStart.getFullYear()
+                const month = today.getMonth() - experienceStart.getMonth()
+                let text = experienceTime + (experienceTime === 1 ? ' ano' : ' anos')
+                if (month > 0) {
+                    text = text + ' e ' + month + ' meses'
+                }
+                document.getElementById("time-experience").innerHTML = ' ' + text + ' de '
+                const bornDate = new Date(1995, 10, 12)
+                let age = today.getFullYear() - bornDate.getFullYear()
+                const monthBorn = today.getMonth() - bornDate.getMonth()
+                if (monthBorn < 0 || (monthBorn === 0 && today.getDate() < bornDate.getDate())) {
+                    age--
+                }
+                document.getElementById("age").innerHTML = 'Tenho ' + age + ' anos,'
+            }
         </script>
-        <div id="app" class="container"></div>
-        <script type="module" src="/src/main.js"></script>
+        <div class="container">
+            <div class="header">
+                <div class="row">
+                    <div class="logo-header col-6">
+                        < Jhon.dev />
+                    </div>
+                    <div class="name-header col-6 text-end">
+                        Jhonatan Henkel
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="my-connections text-center">
+                <a href="https://www.linkedin.com/in/jhonatan-henkel-b55950211/" target="_blank" class="a-default me-3">
+                    <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Jhon-Henkel" target="_blank" class="a-default me-3">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://dev.to/jhonhenkel" target="_blank" class="a-default">
+                    <i class="fa-brands fa-dev"></i>
+                </a>
+            </div>
+            <hr>
+            <div class="presentation">
+                <p class="content-title">
+                    > Olá, meu nome é <strong>Jhonatan Henkel</strong>, mas pode me chamar de <strong>Jhon</strong>. _
+                </p>
+                <p class="text-white">
+                    <span id="age"></span> sou desenvolvedor backend com<span id="time-experience"></span>
+                    experiência em desenvolvimento de sistemas web. Estou cursando Ciência da Computação na Unisul e
+                    sou apaixonado por tecnologia.
+                </p>
+                <p class="text-white">
+                    A previsão da conclusão dop meu bacharelado é em 2026, mas sempre estou em busca de novos conhecimentos,
+                    prova disso é que estou sempre aplicando coisas novas que aprendo em meus projetos pessoais e posts
+                    no dev.to.
+                </p>
+                <p class="content-title">
+                    > Experiências Profissionais (Programação): _
+                </p>
+                <p class="text-white">
+                    <a href="https://www.climba.com.br/" target="_blank" class="a-default">
+                        Climba Commerce
+                    </a>
+                    (03/2021 - Atualmente) - Desenvolvedor backend - Neste local foi onde tive meu primeiro contato
+                    com a programação, foi aqui onde fui orientado e aprendi muito sobre desenvolvimento de sistemas web.
+                    <br>
+                    O projeto no qual
+                    trabalho é uma plataforma SaaS de e-commerce, onde o cliente tem sua loja virtual para vender seus
+                    produtos.
+                    <br>
+                    Minhas principais competências aqui são:
+                    <br>
+                    <br>
+                    <span class="green-color">></span> Desenvolvimento de novas funcionalidades <br>
+                    <span class="green-color">></span> Atuei em equipe de sustentação <br>
+                    <span class="green-color">></span> Correções de bugs <br>
+                    <span class="green-color">></span> Desenvolvimento de API Restful para as lojas virtuais <br>
+                    <span class="green-color">></span> Monitoramento e manutenção de erros no sistema <br>
+                    <span class="green-color">></span> Desenvolvimento de integrações com filas (RabbitMQ) <br>
+                    <span class="green-color">></span> Testes automatizados (Unitário e Integração) <br>
+                    <span class="green-color">></span> Otimização de desempenho de processos <br>
+                    <span class="green-color">></span> Reuniões de homologação com sistemas ERP <br>
+                    <span class="green-color">></span> Renovação de certificados SSL <br>
+                    <span class="green-color">></span> Monitoramento de métricas da plataforma <br>
+                    <span class="green-color">></span> Monitoramento Grafana <br>
+                </p>
+                <p class="content-title">
+                    > Projetos pessoais Online: _
+                </p>
+                <ul class="text-white">
+                    <li>
+                        <a href="https://my-finances-planner-demo.jhon.dev.br/login" target="_blank" class="a-default">
+                            My Finances Planner
+                        </a>
+                        (PHP, Laravel, Vue.js, CSS3, JS and MySQL)
+                    </li>
+                    <li>
+                        <a href="https://piadasquintaserie.jhon.dev.br" target="_blank" class="a-default">
+                            Piadas Quinta Série
+                        </a>
+                        (Vue.js)
+                    </li>
+                    <li>
+                        <a href="https://mime-message-viewer.jhon.dev.br/" target="_blank" class="a-default">
+                            Mime Message Viewer
+                        </a>
+                        (HTML, CSS3 and PHP)
+                    </li>
+                    <li>
+                        <a href="https://password-verify.jhon.dev.br/verify" target="_blank" class="a-default">
+                            API backend Password Verify
+                        </a>
+                        (PHP 8.1)
+                    </li>
+                    <li>
+                        <a href="https://jhon-henkel.github.io/tetris" target="_blank" class="a-default">
+                            Tetris
+                        </a>
+                        (JS vanilla, HTML and CSS3)
+                    </li>
+                    <li>
+                        <a href="https://tictactoe.jhon.dev.br/#!/home" target="_blank" class="a-default">
+                            Tic Tac Toe
+                        </a>
+                        (JS, HTML, CSS3, PHP and MySQL)
+                    </li>
+                    <li>
+                        <a href="https://packagist.org/packages/correios/correios-calculate" target="_blank" class="a-default">
+                            Freight calculation with Correios
+                        </a>
+                        (PHP 8.1)
+                    </li>
+                </ul>
+                <p class="content-title">
+                    > Principais Tecnologias que tenho conhecimento: _
+                </p>
+                <ul class="text-white">
+                    <li>PHP Puro (7.2 e 8+)</li>
+                    <li>Laravel</li>
+                    <li>MySQL</li>
+                    <li>Maria DB</li>
+                    <li>Vue.js</li>
+                    <li>Javascript vanilla</li>
+                    <li>Go Lang</li>
+                    <li>CSS</li>
+                    <li>Java</li>
+                </ul>
+                <p class="text-white">
+                    Segundo as métricas do GitHub, esse é o percentual de linguagens que mais utilizo em meus projetos:
+                    <iframe src="https://github-readme-stats.vercel.app/api/top-langs/?username=jhon-henkel&layout=pie&langs_count=8&theme=highcontrast&hide_border=true&hide_title=true"
+                            width="100%"
+                            height="350">
+                    </iframe>
+                </p>
+                <iframe src="https://skillicons.dev/icons?i=git,docker,php,html,css,js,angular,vue,bootstrap,mysql,laravel,vite,go,java"
+                        width="80%"
+                        height="80">
+                </iframe>
+                <p class="content-title">
+                    > Informações de contato: _
+                </p>
+                <p class="text-white">
+                    <span class="green-color">> E-mail:</span> jhowrf@gmail.com <br>
+                    <span class="green-color">> What's App:</span> (48) 99611-7339 <br>
+                <hr>
+                <div class="text-center footer-content">
+                    *Sim, esse é um portfólio de um desenvolvedor backend
+                </div>
+                <hr>
+            </div>
+        </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
                 integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
                 crossorigin="anonymous">
