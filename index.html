@@ -26,6 +26,7 @@
                 const today = new Date()
                 const experienceStart = new Date(2022, 0, 01)
                 const experienceTime = today.getFullYear() - experienceStart.getFullYear()
+                console.log(experienceTime)
                 const month = today.getMonth() - experienceStart.getMonth()
                 let text = experienceTime + (experienceTime === 1 ? ' ano' : ' anos')
                 if (month > 0) {
