@@ -32,7 +32,7 @@
                     text = text + ' e ' + month + ' meses'
                 }
                 document.getElementById("time-experience").innerHTML = ' ' + text + ' de '
-                const bornDate = new Date(1995, 10, 12)
+                const bornDate = new Date(1995, 9, 12)
                 let age = today.getFullYear() - bornDate.getFullYear()
                 const monthBorn = today.getMonth() - bornDate.getMonth()
                 if (monthBorn < 0 || (monthBorn === 0 && today.getDate() < bornDate.getDate())) {
