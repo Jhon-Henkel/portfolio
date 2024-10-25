@@ -27,9 +27,9 @@
                 const experienceStart = new Date(2022, 0, 01)
                 const experienceTime = today.getFullYear() - experienceStart.getFullYear()
                 const month = today.getMonth() - experienceStart.getMonth()
-                let text = experienceTime + ' anos'
-                if (month > 3) {
-                    text = (experienceTime++) + ' anos'
+                let text = experienceTime + (experienceTime === 1 ? ' ano' : ' anos')
+                if (month > 0) {
+                    text = text + ' e ' + month + ' meses'
                 }
                 document.getElementById("time-experience").innerHTML = ' ' + text + ' de '
                 const bornDate = new Date(1995, 9, 12)
