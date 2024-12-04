@@ -25,8 +25,12 @@
             window.onload = function() {
                 const today = new Date()
                 const experienceStart = new Date(2022, 0, 01)
-                const experienceTime = today.getFullYear() - experienceStart.getFullYear()
-                const month = today.getMonth() - experienceStart.getMonth()
+                let experienceTime = today.getFullYear() - experienceStart.getFullYear()
+                let month = today.getMonth() - experienceStart.getMonth()
+                if (month > 11) {
+                    experienceTime++
+                    month = 0
+                }
                 let text = experienceTime + (experienceTime === 1 ? ' ano' : ' anos')
                 if (month > 0) {
                     text = text + ' e ' + (month + 2) + ' meses'
