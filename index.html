@@ -24,18 +24,6 @@
 
             window.onload = function() {
                 const today = new Date()
-                const experienceStart = new Date(2022, 0, 01)
-                let experienceTime = today.getFullYear() - experienceStart.getFullYear()
-                let month = today.getMonth() - experienceStart.getMonth()
-                if (month > 10) {
-                    experienceTime++
-                    month = 0
-                }
-                let text = experienceTime + (experienceTime === 1 ? ' ano' : ' anos')
-                if (month > 0) {
-                    text = text + ' e ' + (month + 2) + ' meses'
-                }
-                document.getElementById("time-experience").innerHTML = ' <strong>' + text + '</strong> de '
                 const bornDate = new Date(1995, 9, 12)
                 let age = today.getFullYear() - bornDate.getFullYear()
                 const monthBorn = today.getMonth() - bornDate.getMonth()
@@ -74,7 +62,7 @@
                     > Olá, meu nome é <strong>Jhonatan Henkel</strong>, mas pode me chamar de <strong>Jhon</strong>. _
                 </p>
                 <p class="text-white">
-                    <span id="age"></span> sou desenvolvedor backend com<span id="time-experience"></span>
+                    <span id="age"></span> sou desenvolvedor backend desde janeiro de 2022 com 
                     experiência em desenvolvimento de sistemas web. Estou cursando Ciência da Computação na Unisul e
                     sou apaixonado por tecnologia.
                 </p>
