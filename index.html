@@ -1,244 +1,181 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-    <head>
-        <meta charset="UTF-8">
-        <link rel="icon" href="./src/assets/favicon.png">
-        <title>Olá, eu sou o Jhon</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-              rel="stylesheet"
-              integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
-              crossorigin="anonymous">
-        <link rel="stylesheet" href="./src/assets/main.css">
-        <meta name="google-adsense-account" content="ca-pub-8666332700248879">
-    </head>
-    <body>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-KZF0NLX1C5"></script>
-        <script type="text/javascript">
-            window.dataLayer = window.dataLayer || [];
-            function gtag() {
-                dataLayer.push(arguments);
-            }
-            gtag('js', new Date());
-            gtag('config', 'G-KZF0NLX1C5');
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Jhonatan Henkel | Especialista PHP & Coordenador de desenvolvimento</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-            window.onload = function() {
-                const today = new Date()
-                const bornDate = new Date(1995, 9, 12)
-                let age = today.getFullYear() - bornDate.getFullYear()
-                const monthBorn = today.getMonth() - bornDate.getMonth()
-                if (monthBorn < 0 || (monthBorn === 0 && today.getDate() < bornDate.getDate())) {
-                    age--
-                }
-                document.getElementById("age").innerHTML = 'Tenho <strong>' + age + '</strong> anos,'
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.7;
+            scroll-behavior: smooth;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 80px 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 5px;
+            color: #ffffff;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #58a6ff;
+            height: 24px;
+        }
+
+        h2 {
+            margin-top: 60px;
+            font-size: 22px;
+            border-bottom: 1px solid #30363d;
+            padding-bottom: 8px;
+            color: #ffffff;
+        }
+
+        p {
+            margin: 12px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        a {
+            color: #58a6ff;
+            text-decoration: none;
+        }
+
+        .footer {
+            margin-top: 80px;
+            font-size: 14px;
+            color: #8b949e;
+        }
+
+        /* animação de entrada */
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* cursor piscando */
+        .cursor {
+            display: inline-block;
+            width: 8px;
+            background: #58a6ff;
+            margin-left: 4px;
+            animation: blink 1s infinite;
+        }
+
+        @keyframes blink {
+            0%, 50%, 100% { opacity: 1; }
+            25%, 75% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="reveal">Jhonatan Henkel</h1>
+    <div class="subtitle reveal" id="typed"></div>
+
+    <p class="reveal">
+        Desenvolvedor PHP e coordenador técnico focado em organizar código, processos e pessoas
+        para transformar sistemas legados em arquiteturas limpas, modulares e prontas para crescer.
+    </p>
+
+    <h2 class="reveal">Stack principal</h2>
+    <ul class="reveal">
+        <li>PHP 7/8 • Laravel • CodeIgniter</li>
+        <li>Vue.js • Nuxt • Ionic</li>
+        <li>Linux • Docker • VPS • Apache/Nginx • Tailscale</li>
+        <li>APIs REST • Arquitetura modular • Integrações complexas</li>
+    </ul>
+
+    <h2 class="reveal">O que eu resolvo</h2>
+    <ul class="reveal">
+        <li>Migração de sistema legado sem parar a operação</li>
+        <li>Organização de código caótico em arquitetura sustentável</li>
+        <li>Integração entre sistemas, serviços e hardware</li>
+        <li>Automação de processos manuais</li>
+        <li>Direção técnica clara para o time</li>
+    </ul>
+
+    <h2 class="reveal">Experiência prática</h2>
+    <ul class="reveal">
+        <li>CodeIgniter ↔ Laravel via API</li>
+        <li>Axis, MQTT, Moodle (SCORM), Metabase, Microsoft Forms</li>
+        <li>PDFs com DomPDF e wkhtmltopdf</li>
+        <li>Permissões complexas e sidebars dinâmicas em Vue</li>
+        <li>Redes privadas com Tailscale</li>
+    </ul>
+
+    <h2 class="reveal">Filosofia</h2>
+    <p class="reveal">Código simples. Modular. Sustentável.</p>
+
+    <h2 class="reveal">Contato</h2>
+    <p class="reveal">
+        LinkedIn: <a href="#">seu-linkedin-aqui</a><br>
+        GitHub: <a href="#">seu-github-aqui</a>
+    </p>
+
+    <div class="footer reveal">
+        © 2026 Jhonatan Henkel
+    </div>
+
+</div>
+
+<script>
+    const text = "Especialista PHP • Coordenador de desenvolvimento • Integrações e Legados";
+    const typed = document.getElementById("typed");
+    let i = 0;
+
+    function typeWriter() {
+        if (i < text.length) {
+            typed.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 40);
+        } else {
+            typed.innerHTML += '<span class="cursor"></span>';
+        }
+    }
+
+    typeWriter();
+
+    const reveals = document.querySelectorAll(".reveal");
+
+    function revealOnScroll() {
+        const windowHeight = window.innerHeight;
+        reveals.forEach(el => {
+            const top = el.getBoundingClientRect().top;
+            if (top < windowHeight - 40) {
+                el.classList.add("active");
             }
-        </script>
-        <div class="container">
-            <div class="header">
-                <div class="row">
-                    <div class="logo-header col-6">
-                        < Jhon.dev />
-                    </div>
-                    <div class="name-header col-6 text-end">
-                        Jhonatan Henkel
-                    </div>
-                </div>
-            </div>
-            <hr>
-            <div class="my-connections text-center">
-                <a href="https://www.linkedin.com/in/jhonatan-henkel-b55950211/" target="_blank" class="a-default me-3">
-                    <i class="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a href="https://github.com/Jhon-Henkel" target="_blank" class="a-default me-3">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://dev.to/jhonhenkel" target="_blank" class="a-default">
-                    <i class="fa-brands fa-dev"></i>
-                </a>
-            </div>
-            <hr>
-            <div class="presentation">
-                <p class="content-title">
-                    > Olá, meu nome é <strong>Jhonatan Henkel</strong>, mas pode me chamar de <strong>Jhon</strong>. _
-                </p>
-                <p class="text-white">
-                    <span id="age"></span> sou desenvolvedor backend desde janeiro de 2022 com 
-                    experiência em desenvolvimento de sistemas web. Estou cursando Ciência da Computação na Unisul e
-                    sou apaixonado por tecnologia.
-                </p>
-                <p class="text-white">
-                    A previsão da conclusão do meu bacharelado é em 2026, mas sempre estou em busca de novos conhecimentos,
-                    prova disso é que estou sempre aplicando coisas novas que aprendo em meus projetos pessoais e posts
-                    no dev.to.
-                </p>
-                <p class="text-white">
-                    A maior parte do meu tempo livre passo estudando e praticando programação, também gosto de jogar vídeo game, tocar
-                    guitarra, escrever posts para o dev.to, passar tempo de qualidade com minha família e meus pets.
-                </p>
-                <p class="content-title">
-                    > Experiências Profissionais (Programação): _
-                </p>
-                <p class="text-white">
-                    <a href="https://www.telnav.com/" target="_blank" class="a-default">
-                        Telnav Telecomunicações
-                    </a>
-                    (12/2024 - Atualmente) - Desenvolvedor backend - Na Telnav eu atuo fazendo melhorias e corrigindo bugs em um sistema de uso interno. 
-                    Esse sistema é usado para gerenciar financeiro, RH, produtos, estoque, ordens de compra, ordens de serviço.
-                    <br>
-                    <br>
-                    O sistema é legado, usando tecnologias como CodeIgniter 3 e PHP 7.2.
-                    <br>
-                    <br>
-                    Também sou responsável pelo levantamento de requisitos com a equipe que vai usar as novas funcionalidades.
-                    <br>
-                    <br>
-                    Algumas das tecnologias que usei nessa empresa foram: PHP 7.2, Postgress, Docker, JavaScript, JQuery e HTML.
-                    <br>
-                    <br>
-                    Minhas principais competências são:
-                    <br>
-                    <br>
-                    <span class="green-color">></span> Desenvolvimento de novas funcionalidades <br>
-                    <span class="green-color">></span> Correções de bugs <br>
-                    <span class="green-color">></span> Monitoramento e manutenção de erros no sistema <br>
-                    <span class="green-color">></span> Otimização de desempenho de processos <br>
-                    <span class="green-color">></span> Levantamento de requisitos <br>
-                </p>
-                <p class="text-white">
-                    <a href="https://www.climba.com.br/" target="_blank" class="a-default">
-                        Climba Commerce
-                    </a>
-                    (03/2022 - 11/2024) - Desenvolvedor backend - Na Climba meu papel como desenvolvedor era criar novas funcionalidades e corrigir bugs. 
-                    Aqui participei da migração de tecnologia, como migrar a plataforma do PHP 7.4 para o 8.2. 
-                    <br>
-                    <br>
-                    Algumas das tecnologias que usei nessa empresa foram: PHP 7.4 e 8.2, MariaBD, Docker, Redis, RabbitMQ, Grafana, HTML, JavaScript e TypeScript.
-                    <br>
-                    <br>
-                    Minhas principais competências são:
-                    <br>
-                    <br>
-                    <span class="green-color">></span> Desenvolvimento de novas funcionalidades <br>
-                    <span class="green-color">></span> Atuei em equipe de sustentação <br>
-                    <span class="green-color">></span> Correções de bugs <br>
-                    <span class="green-color">></span> Desenvolvimento de API Restful para as lojas virtuais <br>
-                    <span class="green-color">></span> Monitoramento e manutenção de erros no sistema <br>
-                    <span class="green-color">></span> Desenvolvimento de integrações com filas (RabbitMQ) <br>
-                    <span class="green-color">></span> Testes automatizados (Unitário e Integração) <br>
-                    <span class="green-color">></span> Otimização de desempenho de processos <br>
-                    <span class="green-color">></span> Reuniões de homologação com sistemas ERP <br>
-                    <span class="green-color">></span> Renovação de certificados SSL <br>
-                    <span class="green-color">></span> Monitoramento de métricas da plataforma <br>
-                    <span class="green-color">></span> Monitoramento Grafana <br>
-                </p>
-                <p class="content-title">
-                    > Projetos Profissionias Online: _
-                </p>
-                <p class="text-white">
-                    Meu principal projeto é o Finanças na mão, evolução do projeto pessoal My Finances Planner, que é um sistema de controle financeiro pessoal, que
-                    desenvolvi para me ajudar a ter um controle maior sobre minhas finanças. Estou constantemente
-                    atualizando e melhorando o sistema.
-                </p>
-                <ul class="text-white">
-                    <li>
-                        <a href="https://financasnamao.com.br/site" target="_blank" class="a-default">
-                            Finanças na Mão
-                        </a>
-                        (PHP, Laravel, Vue.js, Ionic, CSS3, GO, RabbitMQ, Redis, JS and MySQL)
-                    </li>
-                    <li>
-                        <a href="https://jhon-henkel.github.io/gta-helper/" target="_blank" class="a-default">
-                            GTA Helper
-                        </a>
-                        (Vue.js, Ionic, typeScript)
-                    </li>
-                    <li>
-                        <a href="https://github.com/Jhon-Henkel/market_control" target="_blank" class="a-default">
-                            Market Control
-                        </a>
-                        (PHP, Laravel, Docker, MySQL and Telegram Chat Bot)
-                    </li>
-                </ul>
-                <p class="content-title">
-                    > Projetos De Estudo Online: _
-                </p>
-                <ul class="text-white">
-                    <li>
-                        <a href="https://jhon-henkel.github.io/tetris" target="_blank" class="a-default">
-                            Tetris
-                        </a>
-                        (JS vanilla, HTML and CSS3)
-                    </li>
-                    <li>
-                        <a href="https://packagist.org/packages/correios/correios-calculate" target="_blank" class="a-default">
-                            Freight calculation with Correios
-                        </a>
-                        (PHP 8.1)
-                    </li>
-                     <li>
-                        <a href="https://www.npmjs.com/package/@jhowrf/local-storage-cache" target="_blank" class="a-default">
-                            Local Storage Cache
-                        </a>
-                        (TypeScript)
-                    </li>
-                    <li>
-                        <a href="https://plugins.jetbrains.com/plugin/23526-br-dev-tools" target="_blank" class="a-default">
-                            Br Dev Tools
-                        </a>
-                        (Kotlin)
-                    </li>
-                </ul>
-                <p class="content-title">
-                    > Principais Tecnologias que tenho conhecimento: _
-                </p>
-                <ul class="text-white">
-                    <li>PHP Puro (7.2 e 8+)</li>
-                    <li>Laravel</li>
-                    <li>CodeIgniter 3</li>
-                    <li>MySQL</li>
-                    <li>Maria DB</li>
-                    <li>Postgres SQL</li>
-                    <li>Vue.js</li>
-                    <li>Ionic</li>
-                    <li>JavaScript vanilla</li>
-                    <li>Go Lang</li>
-                    <li>TypeScript</li>
-                    <li>Git</li>
-                    <li>Docker</li>
-                    <li>Angular JS</li>
-                    <li>RabbitMQ</li>
-                    <li>Redis</li>
-                    <li>Bootstrap</li>
-                    <li>CSS</li>
-                    <li>Java</li>
-                </ul>
-                <p class="text-white">
-                    Segundo as métricas do GitHub, esse é o percentual de linguagens que mais utilizo em meus projetos:
-                    <iframe src="https://github-readme-stats.vercel.app/api/top-langs/?username=jhon-henkel&layout=pie&langs_count=10&theme=highcontrast&hide_border=true&hide_title=true&hide=jupyter%20notebook"
-                            width="100%"
-                            height="350">
-                    </iframe>
-                </p>
-                <iframe src="https://go-skill-icons.vercel.app/api/icons?i=git,docker,php,mysql,laravel,go,java,kotlin,redis,rabbitmq,codeigniter,postgresql,kafka,insomnia,postman,keycloak,html,css,js,angular,vue,bootstrap,vite,typescript,twig,pinia,cloudflare,ubuntu,azure,composer,npm,nuxt,tailwind,python,jupyter"
-                        width="100%"
-                        height="100">
-                </iframe>
-                <p class="content-title">
-                    > Informações de contato: _
-                </p>
-                <p class="text-white">
-                    <span class="green-color">> E-mail:</span> jhon@jhon.dev.br <br>
-                    <span class="green-color">> WhatsApp:</span> (48) 99611-7339 <br>
-                <hr>
-                <div class="text-center footer-content">
-                    *Sim, esse é um portfólio de um desenvolvedor backend
-                </div>
-                <hr>
-            </div>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
-                integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
-                crossorigin="anonymous">
-        </script>
-    </body>
+        });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    revealOnScroll();
+</script>
+
+</body>
 </html>
